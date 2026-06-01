@@ -29,6 +29,7 @@ export default function SwipeCard({ item, onSwipe, index, total }) {
   const trigger = (dir) => {
     setLeaving(dir);
     setTimeout(() => onSwipe(dir, item), 320);
+    if (leaving) return;
   };
 
   const onPointerDown = (e) => {
