@@ -72,7 +72,7 @@ export default function SurveyView({ receiptData, personName, sessionId }) {
         <div style={{ height: '100%', width: `${progress}%`, background: 'linear-gradient(90deg, var(--blue), var(--green))', borderRadius: 2, transition: 'width 0.3s ease' }} />
       </div>
 
-      <SwipeCard item={items[current]} onSwipe={handleSwipe} index={current} total={items.length} />
+      <SwipeCard key={current} item={items[current]} onSwipe={handleSwipe} index={current} total={items.length} />
     </div>
   );
 }
